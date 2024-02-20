@@ -11,7 +11,6 @@ public class SecurityConfig{
 		http
         .authorizeHttpRequests(authorizeRequests ->
             authorizeRequests
-                .requestMatchers("/", "/error", "/webjars/**").permitAll()
                 .anyRequest().authenticated()
         )
         .logout(logout -> logout
